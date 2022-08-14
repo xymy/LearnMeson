@@ -13,7 +13,7 @@ project(
 cpp_args = []
 
 if get_option('default_library') == 'shared'
-    cpp_args += ['-DDLL_EXPORT']
+    cpp_args += ['-DSIMPLELIB_SHARED', '-DSIMPLELIB_SHARED_BUILDING']
 endif
 
 simplelib_inc = include_directories('include')

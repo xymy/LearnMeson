@@ -1,18 +1,18 @@
 #pragma once
 
 #ifndef SIMPLELIB_API
-    #ifdef DLL_EXPORT
-        #if defined _WIN32 || defined __CYGWIN__
-            #define SIMPLELIB_API __declspec(dllexport)
+    #ifdef SIMPLELIB_SHARED // shared library
+        #ifdef _WIN32
+            #ifdef SIMPLELIB_SHARED_BUILDING
+                #define SIMPLELIB_API __declspec(dllexport)
+            #else
+                #define SIMPLELIB_API __declspec(dllimport)
+            #endif
         #else
             #define SIMPLELIB_API __attribute__((visibility("default")))
         #endif
-    #else
-        #if defined _WIN32 || defined __CYGWIN__
-            #define SIMPLELIB_API __declspec(dllimport)
-        #else
-            #define SIMPLELIB_API
-        #endif
+    #else // static library
+        #define SIMPLELIB_API
     #endif
 #endif
 
