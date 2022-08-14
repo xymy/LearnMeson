@@ -1,0 +1,5 @@
+BasedOnStyle: LLVM
+AllowShortFunctionsOnASingleLine: Inline
+ColumnLimit: 120
+IndentPPDirectives: BeforeHash
+IndentWidth: 4
