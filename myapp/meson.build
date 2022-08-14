@@ -12,10 +12,6 @@ project(
 
 cpp_args = []
 
-if get_option('default_library') == 'shared'
-    cpp_args += ['-DSIMPLELIB_SHARED']
-endif
-
 simplelib_proj = subproject('simplelib')
 simplelib_dep = simplelib_proj.get_variable('simplelib_dep')
 
