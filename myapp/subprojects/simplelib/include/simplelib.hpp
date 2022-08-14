@@ -16,4 +16,8 @@
     #endif
 #endif
 
+#define STR_EX(s) #s
+#define STR(s) STR_EX(s)
+#define SIMPLELIB_API_STR (STR(SIMPLELIB_API) "")
+
 SIMPLELIB_API void hello();

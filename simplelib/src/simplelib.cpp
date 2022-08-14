@@ -2,5 +2,6 @@
 #include <simplelib.hpp>
 
 void hello() {
-    std::cout << "Hello, Meson!" << std::endl;
+    std::cout << "In hello():" << std::endl;
+    std::cout << "SIMPLELIB_API is " << SIMPLELIB_API_STR << " when building library." << std::endl;
 }
