@@ -10,4 +10,4 @@ project(
     meson_version : '>=0.61',
 )
 
-executable('simpleapp', 'src/simpleapp.cpp')
+executable('simpleapp', 'src/simpleapp.cpp', install : true)
